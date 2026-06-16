@@ -624,6 +624,7 @@ h3 {
 .meal-hero {
   grid-template-columns: minmax(0, 1fr) minmax(250px, 0.72fr);
   gap: 36px;
+  align-items: start;
   padding-top: 50px;
   padding-bottom: 44px;
 }
