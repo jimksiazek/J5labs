@@ -190,8 +190,7 @@ h3 {
 }
 
 .signal-board,
-.water-board,
-.meal-board {
+.water-board {
   position: relative;
   overflow: hidden;
   border: 1px solid rgba(19, 33, 31, 0.12);
@@ -203,8 +202,7 @@ h3 {
 }
 
 .signal-board::before,
-.water-board::before,
-.meal-board::before {
+.water-board::before {
   content: "";
   position: absolute;
   inset: 0;
@@ -479,6 +477,10 @@ h3 {
   align-items: start;
 }
 
+.mealmuse-screenshot-grid {
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+}
+
 .watch-grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 360px));
@@ -530,9 +532,7 @@ h3 {
   font-size: 1.05rem;
 }
 
-.shot-caption p,
-.meal-row span,
-.meal-note span {
+.shot-caption p {
   color: var(--muted);
 }
 
@@ -621,87 +621,22 @@ h3 {
   max-width: 620px;
 }
 
-.meal-board {
-  background:
-    linear-gradient(180deg, rgba(255, 255, 255, 0.94), rgba(255, 246, 229, 0.88)),
-    var(--surface);
+.meal-hero {
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 0.72fr);
+  gap: 36px;
+  padding-top: 50px;
+  padding-bottom: 44px;
 }
 
-.meal-board::before {
-  background:
-    linear-gradient(90deg, rgba(233, 89, 79, 0.09) 1px, transparent 1px),
-    linear-gradient(rgba(242, 184, 75, 0.16) 1px, transparent 1px);
-  background-size: 28px 28px;
-}
-
-.meal-board-header {
+.meal-hero-shot {
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 14px;
-  color: var(--muted);
-  font-size: 0.92rem;
-  font-weight: 750;
+  align-self: center;
+  justify-content: center;
+  min-width: 0;
 }
 
-.meal-dot {
-  background: var(--gold);
-  box-shadow: 0 0 0 6px rgba(242, 184, 75, 0.2);
-}
-
-.meal-calendar {
-  display: grid;
-  grid-template-columns: repeat(5, 1fr);
-  gap: 8px;
-}
-
-.meal-calendar span {
-  display: grid;
-  place-items: center;
-  min-height: 48px;
-  border: 1px solid var(--line);
-  border-radius: 6px;
-  background: #ffffff;
-  color: var(--teal-dark);
-  font-weight: 850;
-}
-
-.meal-calendar span:nth-child(3) {
-  color: #fffaf2;
-  border-color: var(--coral);
-  background: var(--coral);
-}
-
-.meal-stack {
-  display: grid;
-  gap: 12px;
-}
-
-.meal-row {
-  display: grid;
-  grid-template-columns: 92px 1fr;
-  gap: 14px;
-  align-items: center;
-  border-bottom: 1px solid var(--line);
-  padding-bottom: 12px;
-}
-
-.meal-row:last-child {
-  border-bottom: 0;
-  padding-bottom: 0;
-}
-
-.meal-row strong {
-  font-size: 1.2rem;
-}
-
-.meal-note {
-  display: grid;
-  gap: 5px;
-  border: 1px solid var(--line);
-  border-radius: 8px;
-  background: rgba(255, 255, 255, 0.86);
-  padding: 16px;
+.meal-hero-shot .phone-frame {
+  width: min(100%, 252px);
 }
 
 .reel-hero {
@@ -771,6 +706,7 @@ h3 {
   }
 
   .contact-band,
+  .meal-hero,
   .project-card,
   .screenshot-grid,
   .desktop-shot-grid,
@@ -830,10 +766,5 @@ h3 {
 
   .site-footer {
     flex-direction: column;
-  }
-
-  .meal-row {
-    grid-template-columns: 1fr;
-    gap: 3px;
   }
 }
