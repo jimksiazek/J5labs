@@ -650,7 +650,7 @@ h3 {
 
 .desktop-shot-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.08fr) minmax(0, 0.92fr);
+  grid-template-columns: repeat(2, minmax(0, 1fr));
   gap: 22px;
   align-items: start;
 }
@@ -674,6 +674,16 @@ h3 {
   height: auto;
   border-radius: 7px;
   background: #ffffff;
+}
+
+.desktop-shot .desktop-frame {
+  aspect-ratio: 16 / 9;
+}
+
+.desktop-shot .desktop-frame img {
+  height: 100%;
+  object-fit: cover;
+  object-position: top center;
 }
 
 .reel-preview-frame {
