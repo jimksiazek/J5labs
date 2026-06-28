@@ -694,6 +694,25 @@ h3 {
   width: min(100%, 252px);
 }
 
+.shore-hero {
+  grid-template-columns: minmax(0, 1fr) minmax(250px, 0.72fr);
+  gap: 36px;
+  align-items: start;
+  padding-top: 50px;
+  padding-bottom: 44px;
+}
+
+.shore-hero-shot {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  min-width: 0;
+}
+
+.shore-hero-shot .phone-frame {
+  width: min(100%, 252px);
+}
+
 .route-hero {
   grid-template-columns: minmax(0, 1fr) minmax(250px, 0.72fr);
   gap: 36px;
@@ -715,6 +734,10 @@ h3 {
 
 .reel-hero {
   grid-template-columns: minmax(320px, 0.82fr) minmax(0, 1.18fr);
+  gap: 36px;
+  align-items: start;
+  padding-top: 50px;
+  padding-bottom: 44px;
 }
 
 .reel-hero-preview {
@@ -796,6 +819,7 @@ h3 {
 
   .contact-band,
   .meal-hero,
+  .shore-hero,
   .route-hero,
   .project-card,
   .screenshot-grid,
