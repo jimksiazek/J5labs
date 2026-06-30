@@ -534,7 +534,7 @@ h3 {
 
 .watch-grid {
   display: grid;
-  grid-template-columns: repeat(2, minmax(0, 360px));
+  grid-template-columns: repeat(3, minmax(0, 328px));
   justify-content: center;
   align-items: start;
   gap: 22px;
